@@ -1,0 +1,38 @@
+
+6.
+Write a program to print the area of a rectangle by creating a class named 'Area' having two
+functions. First function named as 'setDim' takes the length and breadth of the rectangle as
+parameters and the second function named as 'getArea' returns the area of the rectangle. Length and
+breadth of the rectangle are entered through keyboard.
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+class Area 
+{
+    private:
+          int l,b,area;
+    public:
+    void  setdim()
+    {
+        cout<<"\n enter length and breadth of the rectangle "<<endl;
+        cin>>l>>b;
+        area=l*b;
+    }
+    void getArea()
+    {
+        cout<<"\nthe area of the rectangle="<<area;
+    }
+};
+int main() 
+{
+ Area  a1;
+	a1.setdim();
+	a1.getArea();
+}
+output:-
+ enter length and breadth of the rectangle 
+5
+8
+
+the area of the rectangle=40

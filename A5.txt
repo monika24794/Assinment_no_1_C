@@ -1,0 +1,32 @@
+
+5.
+Write a program to print the area of two rectangles having sides (4,5) and (5,8) respectively by
+creating a class named 'Rectangle' with a function named 'Area' which returns the area. Length and
+breadth are passed as parameters to its constructor.
+
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+class rectangle 
+{
+public:
+    void area(int a,int b);
+};
+
+void rectangle ::area(int a,int b)
+{
+	float area= a*b;
+	cout<<"\nArea of a rectangle  is: "<<area;
+}
+
+
+int main() 
+{
+  rectangle  r1,r2;
+	r1.area(4,5);
+	r2.area(5,8);
+}
+output:-
+Area of a rectangle  is: 20
+Area of a rectangle  is: 40

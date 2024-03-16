@@ -1,0 +1,120 @@
+12/*Write a program to print the name, salary and date of joining of 10 employees in a company. Use
+array of objects.*/
+#include<iostream>
+using namespace std;
+int health=200,tax=300;
+class employee
+{
+int salary ;
+char name[20],date[10];
+public:
+void getdata()
+{
+cout<<"Enter the employee name:"<<endl;
+cin>>name;    
+cout<<"Enter the salary:"<<endl;
+cin>>salary;
+cout<<"Enter the  date of joining:"<<endl;
+cin>>date;
+}
+void display()
+{
+cout<<name<<"\t\t"<<salary<<"\t"<<date<<"\t"<<endl;  
+}
+};
+int main()
+{
+cout<<"****************"<<endl;
+cout<<"Employee details"<<endl;
+cout<<"****************"<<endl;
+int size=10;
+employee e[20];
+for( int i=0;i<size;i++)
+{
+e[i].getdata();
+}
+cout<<"EMPLOYEE NAME\tsalary\tdate of joining"<<endl;
+for(int i=0;i<size;i++)
+{
+e[i].display();    
+}
+}
+Output:-
+****************
+Employee details
+****************
+Enter the employee name:ram
+
+
+Enter the salary:
+12000
+Enter the  date of joining:
+12/12/2012
+Enter the employee name:
+sham
+Enter the salary:
+52000
+Enter the  date of joining:
+2/5/2021
+Enter the employee name:
+meena
+Enter the salary:
+56000
+Enter the  date of joining:
+4/8/2018
+Enter the employee name:
+tina
+Enter the salary:
+1265
+Enter the  date of joining:
+21/12/17
+Enter the employee name:
+
+nina
+Enter the salary:
+2589
+Enter the  date of joining:
+4/5/15
+Enter the employee name:
+pooja
+Enter the salary:
+12365
+Enter the  date of joining:
+11/12/21
+Enter the employee name:
+lina
+Enter the salary:
+4500
+Enter the  date of joining:
+12/12/24
+Enter the employee name:
+kundan
+Enter the salary:
+
+
+41004100
+Enter the  date of joining:
+8/9/2008
+Enter the employee name:
+dom
+Enter the salary:
+2365
+Enter the  date of joining:
+12/65/9
+Enter the employee name:
+lina
+Enter the salary:
+14785
+Enter the  date of joining:
+12/9/9
+EMPLOYEE NAME	salary	date of joining
+m		12000	12/12/2012	
+sham		52000	2/5/2021	
+meena		56000	4/8/2018	
+tina		1265	21/12/17	
+nina		2589	4/5/15	
+pooja		12365	11/12/21	
+lina		4500	12/12/24	
+kundan		4100	8/9/2008	
+dom		2365	12/65/9	
+lina		14785	12/9/9	

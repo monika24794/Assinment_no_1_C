@@ -1,0 +1,80 @@
+/*9.
+Print the sum, difference and product of two complex numbers by creating a class named 'Complex'
+with separate functions for each operation whose real and imaginary parts are entered by the user.*/
+#include<iostream>
+using namespace std;
+class Complex
+{
+	double re, im;
+public:
+	Complex(double _re, double _im):re(_re),im(_im){}
+	//Copy constructor
+	Complex(Complex &x)
+	{
+		re=x.re;
+		im=x.im;
+	}
+	Complex operator+ (Complex& x)
+	{
+		re=re+x.re;
+		im=im+x.im;
+		return *this;
+	}
+	Complex operator- (Complex& x)
+	{
+		re=re-x.re;
+		im=im-x.im;
+		return *this;
+	}
+	Complex operator* (Complex& x)
+	{
+		re=re*x.re-im*x.im;
+		im=re*x.im+x.re*im;
+		return *this;
+	}
+	friend ostream& operator<<(ostream&, Complex&);
+	friend istream& operator>>(istream&, Complex&);
+};
+
+istream& operator>> (istream& is, Complex& x)
+{
+	cout<<"Please, enter a real part of complex number: ";
+	is>>x.re;
+	cout<<"Please, enter an imaginary part of complex number: ";
+	is>>x.im;
+	return is;
+}
+
+ostream& operator<< (ostream& os, Complex& x)
+{
+	os<<x.re;
+	if(x.im>0)
+	{
+		os<<"+"<<x.im<<"i";	
+	}
+	else if(x.im<0)
+	{
+		os<<x.im<<"i";	
+	}	
+	return os;
+}
+
+int main()
+{
+	int a,b;
+	cout<<"You entered two complex numbers:\n";
+	cin>>a>>b;
+	cout<<"a= "<<a<<"\nb= "<<b<<endl;
+	cout<<"a+b= "<<a+b<<endl;
+	cout<<"a-b= "<<a-b<<endl;
+	cout<<"a*b= "<<a*b<<endl;
+}
+Output:-
+You entered two complex numbers:
+457856
+23
+a= 4578
+b= 23
+a+b= 4601
+a-b= 4555
+a*b= 105294

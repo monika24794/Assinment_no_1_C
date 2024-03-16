@@ -1,0 +1,31 @@
+14/*
+Write a program to calculate the average height of all the students of a class. The number of students
+and their heights are entered by the user.*/
+#include <iostream>
+using namespace std;
+int main() 
+{
+    int s,n,height,number=0;
+    cout<<"\nenter the no of the student in class";
+    cin>>n;
+for(int i = 0; i < n;i++ )
+{
+    int c;
+    cout<<"\nenter height of the student in cm=";
+    cin >> c;
+    height += c;
+    number++;
+}
+ cout<<"\nAverage height of the student in cm=";
+int average = height/number;
+cout << average;
+}
+output:
+
+enter the no of the student in class2
+
+enter height of the student in cm=52
+
+enter height of the student in cm=65
+
+Average height of the student in cm=58

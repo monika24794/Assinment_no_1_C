@@ -1,0 +1,25 @@
+4.
+Write a program to print the area and perimeter of a triangle having sides of 3, 4 and 5 units by
+creating a class named 'Triangle' with the constructor having the three sides as its parameters.
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+class triangle 
+{
+public:
+ triangle  (int a,int b,int c)
+{
+	float ar=((a+b+c)/2.0),area=sqrt(ar*(ar-a)*(ar-b)*(ar-c));
+	cout<<"Area of a triangle is: "<<area<<"\n";
+	cout<<"Perimeter of a triangle is: "<<a+b+c;
+}
+};
+int main() 
+{
+  triangle  tr1(3,4,5);
+}
+
+output:-
+Area of a triangle is: 6
+Perimeter of a triangle is: 12
